@@ -283,7 +283,7 @@ const exercicios = [
         nivel: "Fácil",
         regiao: "Posterior",
         objetivo: "Alongamento",
-        imagem: "img/cards/posterior coxa.png",
+        imagem: "img/cards/posterior-coxa.png",
         gif:"img/gifs/posterior.gif",
 
         comoFazer: [
