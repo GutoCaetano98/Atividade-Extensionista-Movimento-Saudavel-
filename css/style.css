@@ -1,13 +1,6 @@
-/* ==========================================================
-   MOVIMENTO SAUDÁVEL
-   STYLE.CSS
-   VERSÃO FINAL - CARDS SEM CORTES
-========================================================== */
-
-
-/* ==========================================================
+/* =====================================================
    RESET
-========================================================== */
+===================================================== */
 
 * {
     margin: 0;
@@ -15,368 +8,435 @@
     box-sizing: border-box;
 }
 
+
 html {
     scroll-behavior: smooth;
 }
 
+
 body {
-    font-family: 'Poppins', sans-serif;
-    background: #f7f8f8;
+    font-family: "Poppins", sans-serif;
+    background: #f5f7f6;
     color: #222;
     overflow-x: hidden;
 }
 
 
-/* ==========================================================
-   VARIÁVEIS
-========================================================== */
-
-:root {
-    --verde: #63B32E;
-    --verde-hover: #4d9722;
-    --preto: #121212;
-    --cinza: #666666;
-    --cinza-claro: #f7f8f8;
-    --branco: #ffffff;
-
-    --radius: 18px;
-
-    --shadow:
-        0 15px 35px rgba(0, 0, 0, .08);
+img {
+    display: block;
+    max-width: 100%;
 }
 
 
-/* ==========================================================
+/* =====================================================
    CONTAINER
-========================================================== */
+===================================================== */
 
 .container {
-    width: 90%;
-    max-width: 1300px;
-    margin: auto;
+    width: 92%;
+    max-width: 1400px;
+    margin: 0 auto;
 }
 
 
-/* ==========================================================
-   HEADER
-========================================================== */
+/* =====================================================
+   CABEÇALHO
+===================================================== */
 
 .header {
-    position: fixed;
-
-    top: 0;
-    left: 0;
-
     width: 100%;
-    height: 88px;
+    height: 86px;
 
-    background: rgba(18, 18, 18, .97);
-
-    backdrop-filter: blur(10px);
+    background: #171717;
 
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
 
-    padding: 0 60px;
+    padding: 0 4%;
 
-    z-index: 9999;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
-
-/* ==========================================================
-   LOGO
-========================================================== */
 
 .logo {
-    font-size: 28px;
-    font-weight: 700;
-    color: white;
-
-    white-space: nowrap;
-}
-
-.logo span {
-    color: var(--verde);
-}
-
-
-/* ==========================================================
-   MENU
-========================================================== */
-
-nav ul {
     display: flex;
-
-    list-style: none;
-
-    gap: 35px;
-
     align-items: center;
-}
+    gap: 12px;
 
-nav a {
     color: white;
 
-    text-decoration: none;
-
-    font-weight: 500;
-
-    transition: .3s;
-}
-
-nav a:hover {
-    color: var(--verde);
+    font-size: 30px;
+    font-weight: 700;
 }
 
 
-/* ==========================================================
-   HERO
-========================================================== */
-
-.hero {
-    width: 100%;
-
-    margin-top: 88px;
-
-    background: #101010;
-
-    overflow: hidden;
-
-    line-height: 0;
-}
-
-
-.hero-imagem-principal {
-    width: 100%;
-
-    display: block;
-
-    margin: 0;
-    padding: 0;
-
-    overflow: hidden;
-
-    background: #101010;
-}
-
-
-/* ==========================================================
-   IMAGEM PRINCIPAL
-========================================================== */
-
-.hero-imagem-principal img {
-    display: block;
-
-    width: 100%;
-    height: auto;
-
-    max-width: 100%;
+.logo img {
+    width: 42px;
+    height: 42px;
 
     object-fit: contain;
 }
 
 
-/* ==========================================================
-   SEÇÕES
-========================================================== */
+.header nav ul {
+    display: flex;
+    align-items: center;
+    gap: 40px;
 
-.sessao {
-    padding: 100px 0;
+    list-style: none;
 }
 
 
-/* ==========================================================
-   TÍTULOS
-========================================================== */
+.header nav a {
+    color: white;
+    text-decoration: none;
+
+    font-size: 17px;
+    font-weight: 600;
+
+    transition: 0.3s;
+}
+
+
+.header nav a:hover {
+    color: #55b92a;
+}
+
+
+/* =====================================================
+   HERO
+===================================================== */
+
+.hero {
+    min-height: 560px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #f7faf8,
+            #eaf5eb
+        );
+
+    display: flex;
+    align-items: center;
+}
+
+
+.hero-conteudo {
+    width: 92%;
+    max-width: 1400px;
+
+    margin: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 60px;
+}
+
+
+.hero-texto {
+    flex: 1;
+}
+
+
+.hero-tag {
+    color: #55b92a;
+
+    font-size: 14px;
+    font-weight: 700;
+
+    letter-spacing: 1px;
+}
+
+
+.hero h1 {
+    font-size: 58px;
+
+    line-height: 1.1;
+
+    margin: 15px 0;
+}
+
+
+.hero p {
+    max-width: 600px;
+
+    color: #666;
+
+    font-size: 19px;
+
+    line-height: 1.7;
+
+    margin-bottom: 30px;
+}
+
+
+.btn-hero {
+    display: inline-block;
+
+    background: #55b92a;
+
+    color: white;
+
+    text-decoration: none;
+
+    padding: 14px 28px;
+
+    border-radius: 10px;
+
+    font-weight: 600;
+
+    transition: 0.3s;
+}
+
+
+.btn-hero:hover {
+    transform: translateY(-2px);
+
+    background: #48a321;
+}
+
+
+.hero-imagem {
+    flex: 0 0 360px;
+
+    display: flex;
+    justify-content: center;
+}
+
+
+.hero-imagem img {
+    width: 330px;
+
+    height: auto;
+
+    object-fit: contain;
+}
+
+
+/* =====================================================
+   SEÇÕES
+===================================================== */
+
+.sessao {
+    padding: 90px 0;
+}
+
+
+.sessao-depois {
+    background: #eef3f0;
+}
+
 
 .titulo-sessao {
     text-align: center;
 
-    margin-bottom: 55px;
+    margin-bottom: 50px;
 }
+
+
+.subtitulo {
+    color: #55b92a;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    letter-spacing: 1.5px;
+}
+
 
 .titulo-sessao h2 {
-    font-size: 42px;
+    font-size: 34px;
 
-    margin-bottom: 15px;
-
-    line-height: 1.2;
+    margin: 8px 0 10px;
 }
+
 
 .titulo-sessao p {
-    color: var(--cinza);
+    color: #666;
 
-    font-size: 18px;
-
-    line-height: 1.6;
+    font-size: 17px;
 }
 
 
-/* ==========================================================
+/* =====================================================
    CARDS
-========================================================== */
+===================================================== */
 
 .cards {
     display: grid;
 
     grid-template-columns:
-        repeat(auto-fit, minmax(260px, 1fr));
+        repeat(4, minmax(0, 1fr));
 
-    gap: 30px;
+    gap: 28px;
 
-    align-items: start;
+    align-items: stretch;
 }
 
-
-/* ==========================================================
-   CARD INDIVIDUAL
-========================================================== */
 
 .card {
     background: white;
 
-    border-radius: var(--radius);
+    border-radius: 22px;
 
     overflow: hidden;
 
-    box-shadow: var(--shadow);
+    box-shadow:
+        0 8px 30px rgba(0, 0, 0, 0.08);
 
-    transition: .3s;
+    display: flex;
+
+    flex-direction: column;
 
     min-width: 0;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
 }
+
 
 .card:hover {
-    transform: translateY(-8px);
+    transform: translateY(-7px);
+
+    box-shadow:
+        0 15px 35px rgba(0, 0, 0, 0.12);
 }
 
 
-/* ==========================================================
-   ÁREA DA IMAGEM
-========================================================== */
-
-/*
+/* =====================================================
+   IMAGEM DOS CARDS
    IMPORTANTE:
+   NÃO CORTA A IMAGEM
+===================================================== */
 
-   Não usamos "object-fit: cover".
-
-   As imagens dos exercícios possuem formatos
-   diferentes.
-
-   O contain garante que:
-
-   ✔ cabeça não seja cortada
-   ✔ pés não sejam cortados
-   ✔ setas não sejam cortadas
-   ✔ textos antigos não apareçam pela metade
-   ✔ toda a arte seja exibida
-*/
-
-.card > img {
-    display: block;
-
+.card-imagem {
     width: 100%;
 
-    height: 285px;
+    height: 280px;
+
+    background: #ffffff;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    overflow: hidden;
+
+    padding: 10px;
+}
+
+
+.card-imagem img {
+    width: 100%;
+
+    height: 100%;
 
     object-fit: contain;
 
     object-position: center;
 
-    background: #ffffff;
-
-    padding: 0;
-
-    margin: 0;
+    background: white;
 }
 
 
-/* ==========================================================
+/* =====================================================
    CORPO DO CARD
-========================================================== */
+===================================================== */
 
 .card-body {
-    padding: 25px;
+    padding: 24px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    flex: 1;
 }
+
 
 .card-body h3 {
-    font-size: 24px;
+    font-size: 23px;
 
-    margin-bottom: 15px;
-
-    color: #111;
-
-    line-height: 1.25;
+    margin-bottom: 18px;
 }
 
-
-/* ==========================================================
-   INFORMAÇÕES
-========================================================== */
 
 .info {
     display: flex;
 
     flex-direction: column;
 
-    gap: 8px;
-
-    margin-bottom: 20px;
+    gap: 9px;
 
     color: #555;
 
-    font-size: 17px;
+    font-size: 15px;
+
+    margin-bottom: 22px;
 }
 
 
-/* ==========================================================
-   BOTÃO DOS CARDS
-========================================================== */
+.info span {
+    display: block;
+}
 
-.card button {
+
+/* =====================================================
+   BOTÃO
+===================================================== */
+
+.btn-ver-exercicio {
     width: 100%;
-
-    padding: 15px;
 
     border: none;
 
-    border-radius: 10px;
-
-    background: var(--verde);
+    background: #55b92a;
 
     color: white;
 
-    font-family: 'Poppins', sans-serif;
+    padding: 13px;
 
-    font-size: 16px;
+    border-radius: 10px;
 
-    font-weight: 600;
+    font-family: inherit;
+
+    font-size: 15px;
+
+    font-weight: 700;
 
     cursor: pointer;
 
-    transition: .3s;
+    margin-top: auto;
+
+    transition: 0.3s;
 }
 
-.card button:hover {
-    background: var(--verde-hover);
+
+.btn-ver-exercicio:hover {
+    background: #48a321;
 
     transform: translateY(-2px);
 }
 
 
-/* ==========================================================
+/* =====================================================
    DICAS
-========================================================== */
+===================================================== */
 
 .dicas {
-    background: #f0f2f3;
-
     padding: 90px 0;
 
-    position: relative;
-
-    z-index: 2;
+    background: white;
 }
 
 
@@ -384,33 +444,24 @@ nav a:hover {
     display: grid;
 
     grid-template-columns:
-        repeat(auto-fit, minmax(240px, 1fr));
+        repeat(4, 1fr);
 
-    gap: 30px;
+    gap: 25px;
 }
 
 
 .card-dica {
-    background: white;
-
-    padding: 35px;
-
-    border-radius: 18px;
-
-    box-shadow: var(--shadow);
-
     text-align: center;
 
-    transition: .3s;
+    padding: 35px 25px;
+
+    background: #f7f9f8;
+
+    border-radius: 18px;
 }
 
 
-.card-dica:hover {
-    transform: translateY(-6px);
-}
-
-
-.icone {
+.card-dica .icone {
     font-size: 42px;
 
     margin-bottom: 15px;
@@ -418,6 +469,8 @@ nav a:hover {
 
 
 .card-dica h3 {
+    font-size: 20px;
+
     margin-bottom: 10px;
 }
 
@@ -429,12 +482,12 @@ nav a:hover {
 }
 
 
-/* ==========================================================
+/* =====================================================
    RODAPÉ
-========================================================== */
+===================================================== */
 
 .footer {
-    background: #121212;
+    background: #171717;
 
     color: white;
 
@@ -445,22 +498,26 @@ nav a:hover {
 
 
 .footer h3 {
-    margin-bottom: 20px;
+    font-size: 25px;
+
+    margin-bottom: 15px;
 }
 
 
 .footer p {
-    color: #bbbbbb;
+    max-width: 800px;
 
-    margin-bottom: 10px;
+    margin: 10px auto;
+
+    color: #bbb;
 
     line-height: 1.6;
 }
 
 
-/* ==========================================================
+/* =====================================================
    MODAL
-========================================================== */
+===================================================== */
 
 .modal {
     display: none;
@@ -469,202 +526,180 @@ nav a:hover {
 
     inset: 0;
 
-    background: rgba(0, 0, 0, .70);
+    z-index: 2000;
 
-    justify-content: center;
+    background:
+        rgba(0, 0, 0, 0.75);
 
     align-items: center;
 
-    z-index: 99999;
+    justify-content: center;
 
-    padding: 30px;
+    padding: 20px;
+
+    overflow-y: auto;
 }
 
 
-/* ==========================================================
-   CONTEÚDO DO MODAL
-========================================================== */
-
 .modal-conteudo {
-    background: #fff;
+    position: relative;
 
-    width: 95%;
+    width: 100%;
 
-    max-width: 1100px;
+    max-width: 850px;
 
-    max-height: 90vh;
+    max-height: 92vh;
 
     overflow-y: auto;
 
-    border-radius: 20px;
+    background: white;
+
+    border-radius: 22px;
 
     padding: 30px;
-
-    position: relative;
-
-    animation: abrirModal .3s ease;
 }
 
-
-/* ==========================================================
-   ANIMAÇÃO
-========================================================== */
-
-@keyframes abrirModal {
-
-    from {
-        opacity: 0;
-
-        transform: translateY(20px);
-    }
-
-    to {
-        opacity: 1;
-
-        transform: translateY(0);
-    }
-}
-
-
-/* ==========================================================
-   BOTÃO FECHAR
-========================================================== */
 
 .fechar {
     position: absolute;
 
-    right: 25px;
+    right: 22px;
 
     top: 15px;
 
-    font-size: 36px;
+    font-size: 34px;
 
     line-height: 1;
 
     cursor: pointer;
 
-    color: #222;
+    color: #555;
 
-    z-index: 10;
+    z-index: 5;
 }
+
 
 .fechar:hover {
-    color: var(--verde);
+    color: #55b92a;
 }
 
 
-/* ==========================================================
-   TOPO DO MODAL
-========================================================== */
+.modal-conteudo > h2 {
+    text-align: center;
+
+    font-size: 30px;
+
+    margin-bottom: 20px;
+
+    padding-right: 35px;
+}
+
+
+/* =====================================================
+   IMAGEM DO MODAL
+===================================================== */
 
 .topo-modal {
-    display: grid;
+    width: 100%;
 
-    grid-template-columns: 1fr;
+    height: 380px;
 
-    gap: 25px;
+    display: flex;
 
-    align-items: start;
+    align-items: center;
 
-    margin-top: 15px;
+    justify-content: center;
+
+    background: white;
+
+    border-radius: 15px;
+
+    overflow: hidden;
+
+    margin-bottom: 25px;
 }
 
 
-/* ==========================================================
-   IMAGEM DO MODAL
-========================================================== */
-
 .topo-modal img {
-    display: block;
-
     width: 100%;
 
-    max-width: 650px;
-
-    max-height: 420px;
-
-    height: auto;
+    height: 100%;
 
     object-fit: contain;
 
     object-position: center;
-
-    margin: 0 auto;
-
-    background: #fff;
 }
 
 
-/* ==========================================================
+/* =====================================================
    ABAS
-========================================================== */
+===================================================== */
 
 .abas {
-    display: grid;
+    display: flex;
 
-    grid-template-columns:
-        repeat(4, 1fr);
+    flex-wrap: wrap;
 
-    gap: 10px;
+    gap: 8px;
 
-    margin-top: 25px;
+    margin-bottom: 25px;
 }
 
 
 .aba {
     border: none;
 
-    background: #f1f1f1;
-
-    padding: 14px 10px;
-
-    border-radius: 10px;
-
-    cursor: pointer;
-
-    font-family: 'Poppins', sans-serif;
-
-    font-size: 14px;
-
-    font-weight: 600;
+    background: #eef1ef;
 
     color: #444;
 
-    transition: .3s;
+    padding: 11px 15px;
+
+    border-radius: 9px;
+
+    font-family: inherit;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.3s;
 }
 
 
 .aba:hover {
-    background: #e4e4e4;
+    background: #dcebdc;
 }
 
 
 .aba.ativa {
-    background: var(--verde);
+    background: #55b92a;
 
     color: white;
 }
 
 
-/* ==========================================================
+/* =====================================================
    CONTEÚDO DAS ABAS
-========================================================== */
+===================================================== */
 
 #conteudoAba {
-    padding: 25px;
+    min-height: 150px;
 
-    background: #f8f8f8;
-
-    border-radius: 15px;
-
-    margin-top: 20px;
-
-    font-size: 16px;
+    color: #555;
 
     line-height: 1.7;
 }
 
 
+#conteudoAba h3 {
+    color: #222;
+
+    margin-bottom: 15px;
+}
+
+
+#conteudoAba ol,
 #conteudoAba ul {
     padding-left: 25px;
 }
@@ -675,49 +710,28 @@ nav a:hover {
 }
 
 
-/* ==========================================================
-   LINHA DO MODAL
-========================================================== */
-
-.modal-conteudo hr {
-    border: none;
-
-    border-top: 1px solid #ddd;
-
-    margin: 30px 0;
-}
-
-
-/* ==========================================================
+/* =====================================================
    CRONÔMETRO
-========================================================== */
+===================================================== */
 
 .cronometro {
     text-align: center;
 
-    padding: 10px 0 5px;
+    padding-top: 20px;
 }
 
 
-#contador {
-    font-size: 65px;
-
-    font-weight: 700;
-
-    color: var(--verde);
+.cronometro h3 {
+    font-size: 50px;
 
     margin-bottom: 15px;
 }
 
 
-/* ==========================================================
-   BARRA DO CRONÔMETRO
-========================================================== */
-
 .barra {
     width: 100%;
 
-    height: 12px;
+    height: 10px;
 
     background: #e5e5e5;
 
@@ -734,387 +748,157 @@ nav a:hover {
 
     height: 100%;
 
-    background: var(--verde);
+    background: #55b92a;
 
-    border-radius: 20px;
-
-    transition: width .3s linear;
+    transition: width 0.3s;
 }
 
-
-/* ==========================================================
-   BOTÃO CRONÔMETRO
-========================================================== */
 
 .btn-cronometro {
     border: none;
 
-    background: var(--verde);
+    background: #55b92a;
 
     color: white;
 
-    padding: 16px 30px;
+    padding: 14px 25px;
 
-    border-radius: 12px;
+    border-radius: 10px;
+
+    font-family: inherit;
+
+    font-weight: 700;
 
     cursor: pointer;
-
-    font-size: 17px;
-
-    font-weight: 600;
-
-    font-family: 'Poppins', sans-serif;
-
-    transition: .3s;
 }
 
 
 .btn-cronometro:hover {
-    background: var(--verde-hover);
-
-    transform: translateY(-2px);
+    background: #48a321;
 }
 
 
-/* ==========================================================
-   TABLET
-========================================================== */
+/* =====================================================
+   RESPONSIVIDADE
+===================================================== */
 
-@media (max-width: 992px) {
-
-    .header {
-        height: 75px;
-
-        padding: 0 25px;
-    }
-
-    .logo {
-        font-size: 23px;
-    }
-
-    nav {
-        display: none;
-    }
-
-    .hero {
-        margin-top: 75px;
-    }
-
-    .sessao {
-        padding: 80px 0;
-    }
-
-    .titulo-sessao h2 {
-        font-size: 36px;
-    }
+@media (max-width: 1100px) {
 
     .cards {
         grid-template-columns:
             repeat(2, minmax(0, 1fr));
-
-        gap: 25px;
     }
 
-    .card > img {
-        height: 280px;
 
-        object-fit: contain;
+    .dicas-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
     }
 
-    .modal {
-        padding: 20px;
-    }
 
-    .modal-conteudo {
-        max-height: 92vh;
-    }
-
-    .topo-modal img {
-        max-height: 380px;
+    .hero h1 {
+        font-size: 46px;
     }
 
 }
 
 
-/* ==========================================================
-   CELULAR
-========================================================== */
-
-@media (max-width: 600px) {
-
-    /* HEADER */
+@media (max-width: 768px) {
 
     .header {
-        height: 65px;
+        height: auto;
 
-        padding: 0 15px;
+        padding: 18px 5%;
+
+        flex-direction: column;
+
+        gap: 15px;
     }
+
 
     .logo {
-        font-size: 18px;
-    }
-
-    .logo span {
-        font-size: 19px;
-    }
-
-    nav {
-        display: none;
+        font-size: 24px;
     }
 
 
-    /* HERO */
+    .header nav ul {
+        gap: 18px;
+
+        flex-wrap: wrap;
+
+        justify-content: center;
+    }
+
+
+    .header nav a {
+        font-size: 14px;
+    }
+
 
     .hero {
-        margin-top: 65px;
-
-        height: auto;
-
-        min-height: 0;
-
-        padding: 0;
-
-        overflow: hidden;
-    }
-
-    .hero-imagem-principal {
-        height: auto;
-
-        min-height: 0;
-    }
-
-    .hero-imagem-principal img {
-        width: 100%;
-
-        height: auto;
-
-        max-width: 100%;
-
-        display: block;
-
-        object-fit: contain;
+        padding: 60px 0;
     }
 
 
-    /* SEÇÕES */
+    .hero-conteudo {
+        flex-direction: column;
 
-    .sessao {
-        padding: 70px 20px;
-    }
-
-    .container {
-        width: 100%;
-
-        max-width: 100%;
+        text-align: center;
     }
 
 
-    /* TÍTULOS */
-
-    .titulo-sessao {
-        margin-bottom: 40px;
-
-        padding: 0 10px;
-    }
-
-    .titulo-sessao h2 {
-        font-size: 28px;
-
-        line-height: 1.25;
-
-        margin-bottom: 15px;
-    }
-
-    .titulo-sessao p {
-        font-size: 16px;
-
-        line-height: 1.6;
+    .hero p {
+        margin-left: auto;
+        margin-right: auto;
     }
 
 
-    /* CARDS */
+    .hero-imagem {
+        flex: none;
+    }
+
 
     .cards {
         grid-template-columns: 1fr;
-
-        gap: 25px;
     }
 
-    .card {
-        width: 100%;
-    }
-
-    /*
-       No celular também usamos contain.
-       A imagem fica inteira.
-    */
-
-    .card > img {
-        width: 100%;
-
-        height: 300px;
-
-        object-fit: contain;
-
-        object-position: center;
-
-        background: #fff;
-    }
-
-    .card-body {
-        padding: 20px;
-    }
-
-    .card-body h3 {
-        font-size: 22px;
-    }
-
-
-    /* DICAS */
-
-    .dicas {
-        padding: 70px 20px;
-    }
 
     .dicas-grid {
         grid-template-columns: 1fr;
-
-        gap: 20px;
-    }
-
-    .card-dica {
-        padding: 25px 20px;
     }
 
 
-    /* MODAL */
-
-    .modal {
-        padding: 10px;
+    .titulo-sessao h2 {
+        font-size: 28px;
     }
+
 
     .modal-conteudo {
-        width: 100%;
-
-        max-width: 100%;
-
-        max-height: 94vh;
-
         padding: 20px;
-
-        border-radius: 16px;
     }
 
-    .fechar {
-        right: 15px;
-
-        top: 10px;
-
-        font-size: 32px;
-    }
 
     .topo-modal {
-        display: block;
-
-        margin-top: 15px;
-    }
-
-    .topo-modal img {
-        width: 100%;
-
-        max-width: 100%;
-
-        max-height: 350px;
-
-        height: auto;
-
-        object-fit: contain;
-    }
-
-
-    /* ABAS */
-
-    .abas {
-        grid-template-columns: 1fr 1fr;
-
-        gap: 10px;
-    }
-
-    .aba {
-        padding: 12px 8px;
-
-        font-size: 13px;
-    }
-
-
-    /* CONTEÚDO */
-
-    #conteudoAba {
-        padding: 18px;
-
-        font-size: 15px;
-    }
-
-
-    /* CRONÔMETRO */
-
-    #contador {
-        font-size: 55px;
-    }
-
-    .btn-cronometro {
-        width: 100%;
-
-        font-size: 16px;
+        height: 280px;
     }
 
 }
 
 
-/* ==========================================================
-   CELULARES MUITO PEQUENOS
-========================================================== */
+@media (max-width: 480px) {
 
-@media (max-width: 380px) {
-
-    .header {
-        height: 62px;
-
-        padding: 0 12px;
+    .card-imagem {
+        height: 250px;
     }
 
-    .logo {
-        font-size: 17px;
+
+    .abas {
+        flex-direction: column;
     }
 
-    .logo span {
-        font-size: 18px;
-    }
-
-    .hero {
-        margin-top: 62px;
-    }
-
-    .titulo-sessao h2 {
-        font-size: 26px;
-    }
-
-    .titulo-sessao p {
-        font-size: 15px;
-    }
-
-    .card > img {
-        height: 280px;
-    }
-
-    .modal-conteudo {
-        padding: 18px;
-    }
 
     .aba {
-        font-size: 12px;
-
-        padding: 10px 6px;
+        width: 100%;
     }
 
 }
