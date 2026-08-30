@@ -8,12 +8,16 @@ document.addEventListener("DOMContentLoaded", () => {
     const imagem = document.getElementById("imagemModal");
     const conteudo = document.getElementById("conteudoAba");
 
+    const contador = document.getElementById("contador");
+    const barraTempo = document.getElementById("barraTempo");
+    const btnIniciar = document.getElementById("btnIniciar");
+
     let exercicioAtual = null;
     let intervalo = null;
 
 
     // =====================================================
-    // CRIAR TODOS OS CARDS
+    // CRIAR CARDS
     // =====================================================
 
     exercicios.forEach((exercicio) => {
@@ -27,9 +31,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
             <div class="card-imagem">
 
-                <img 
-                    src="${exercicio.imagem}" 
+                <img
+                    src="${exercicio.imagem}"
                     alt="${exercicio.nome}"
+                    loading="lazy"
                 >
 
             </div>
@@ -63,11 +68,12 @@ document.addEventListener("DOMContentLoaded", () => {
                 </div>
 
 
-                <button 
+                <button
                     class="btn-ver-exercicio"
-                    type="button"
-                >
+                    type="button">
+
                     Ver Exercício
+
                 </button>
 
             </div>
@@ -76,20 +82,22 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
         // =================================================
-        // BOTÃO VER EXERCÍCIO
+        // BOTÃO
         // =================================================
 
-        card
-            .querySelector(".btn-ver-exercicio")
-            .addEventListener("click", () => {
+        const botao =
+            card.querySelector(".btn-ver-exercicio");
 
-                abrirModal(exercicio);
 
-            });
+        botao.addEventListener("click", () => {
+
+            abrirModal(exercicio);
+
+        });
 
 
         // =================================================
-        // SEPARAR ANTES E DEPOIS
+        // SEPARAR ANTES / DEPOIS
         // =================================================
 
         if (exercicio.categoria === "Antes") {
@@ -115,22 +123,25 @@ document.addEventListener("DOMContentLoaded", () => {
         exercicioAtual = exercicio;
 
 
-        titulo.textContent = exercicio.nome;
+        titulo.textContent =
+            exercicio.nome;
 
 
-        imagem.src = exercicio.gif;
-
-        imagem.alt = `Demonstração do exercício ${exercicio.nome}`;
-
-
-        // Reiniciar cronômetro
-
-        document.getElementById("contador").textContent = "00";
-
-        document.getElementById("barraTempo").style.width = "0%";
+        imagem.src =
+            exercicio.gif;
 
 
-        // Limpar cronômetro anterior
+        imagem.alt =
+            `Demonstração de ${exercicio.nome}`;
+
+
+        contador.textContent =
+            "00";
+
+
+        barraTempo.style.width =
+            "0%";
+
 
         if (intervalo) {
 
@@ -144,7 +155,8 @@ document.addEventListener("DOMContentLoaded", () => {
         mostrarComoFazer();
 
 
-        modal.style.display = "flex";
+        modal.style.display =
+            "flex";
 
     }
 
@@ -217,13 +229,13 @@ document.addEventListener("DOMContentLoaded", () => {
         conteudo.innerHTML = `
 
             <h3>
-                ⚠ Cuidados
+                ⚠️ Cuidados
             </h3>
 
             <ul>
 
                 ${exercicioAtual.cuidados
-                    .map(item => `<li>⚠ ${item}</li>`)
+                    .map(item => `<li>⚠️ ${item}</li>`)
                     .join("")}
 
             </ul>
@@ -238,7 +250,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     // =====================================================
-    // REGIÃO TRABALHADA
+    // REGIÃO
     // =====================================================
 
     function mostrarRegiao() {
@@ -320,39 +332,33 @@ document.addEventListener("DOMContentLoaded", () => {
 
     document
         .getElementById("fecharModal")
-        .addEventListener("click", () => {
-
-            modal.style.display = "none";
+        .addEventListener("click", fecharModal);
 
 
-            if (intervalo) {
+    function fecharModal() {
 
-                clearInterval(intervalo);
-
-                intervalo = null;
-
-            }
-
-        });
+        modal.style.display =
+            "none";
 
 
+        if (intervalo) {
 
-    // Fechar clicando fora do modal
+            clearInterval(intervalo);
 
-    window.addEventListener("click", (e) => {
+            intervalo = null;
 
-        if (e.target === modal) {
+        }
 
-            modal.style.display = "none";
+    }
 
 
-            if (intervalo) {
+    // Fechar clicando fora
 
-                clearInterval(intervalo);
+    window.addEventListener("click", (evento) => {
 
-                intervalo = null;
+        if (evento.target === modal) {
 
-            }
+            fecharModal();
 
         }
 
@@ -364,66 +370,53 @@ document.addEventListener("DOMContentLoaded", () => {
     // CRONÔMETRO
     // =====================================================
 
-    document
-        .getElementById("btnIniciar")
-        .addEventListener("click", () => {
+    btnIniciar.addEventListener("click", () => {
+
+        if (!exercicioAtual) {
+            return;
+        }
 
 
-            if (!exercicioAtual) {
+        if (intervalo) {
 
-                return;
+            clearInterval(intervalo);
 
-            }
-
-
-            // Cancelar cronômetro anterior
-
-            if (intervalo) {
-
-                clearInterval(intervalo);
-
-            }
+        }
 
 
-            const tempo = parseInt(exercicioAtual.tempo);
-
-            let restante = tempo;
-
-
-            const contador =
-                document.getElementById("contador");
+        const tempo =
+            parseInt(exercicioAtual.tempo);
 
 
-            const barra =
-                document.getElementById("barraTempo");
+        let restante =
+            tempo;
 
 
-            contador.textContent =
-                String(restante).padStart(2, "0");
+        contador.textContent =
+            String(restante).padStart(2, "0");
 
 
-            barra.style.width = "0%";
+        barraTempo.style.width =
+            "0%";
 
 
-            // =================================================
-            // CONTAGEM
-            // =================================================
-
-            intervalo = setInterval(() => {
+        intervalo =
+            setInterval(() => {
 
                 restante--;
 
 
                 contador.textContent =
-                    String(Math.max(restante, 0))
-                    .padStart(2, "0");
+                    String(
+                        Math.max(restante, 0)
+                    ).padStart(2, "0");
 
 
                 const progresso =
                     ((tempo - restante) / tempo) * 100;
 
 
-                barra.style.width =
+                barraTempo.style.width =
                     Math.min(progresso, 100) + "%";
 
 
@@ -434,18 +427,22 @@ document.addEventListener("DOMContentLoaded", () => {
                     intervalo = null;
 
 
-                    contador.textContent = "✔";
+                    contador.textContent =
+                        "✔";
 
 
-                    barra.style.width = "100%";
+                    barraTempo.style.width =
+                        "100%";
 
 
-                    alert("🎉 Alongamento concluído!");
+                    alert(
+                        "🎉 Alongamento concluído!"
+                    );
 
                 }
 
             }, 1000);
 
-        });
+    });
 
 });
