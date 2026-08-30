@@ -1,7 +1,7 @@
 /* ==========================================================
    MOVIMENTO SAUDÁVEL
    STYLE.CSS
-   VERSÃO RESPONSIVA
+   VERSÃO FINAL - CARDS SEM CORTES
 ========================================================== */
 
 
@@ -15,22 +15,15 @@
     box-sizing: border-box;
 }
 
-
 html {
     scroll-behavior: smooth;
 }
 
-
 body {
-
     font-family: 'Poppins', sans-serif;
-
     background: #f7f8f8;
-
     color: #222;
-
     overflow-x: hidden;
-
 }
 
 
@@ -39,23 +32,17 @@ body {
 ========================================================== */
 
 :root {
-
     --verde: #63B32E;
-
     --verde-hover: #4d9722;
-
     --preto: #121212;
-
     --cinza: #666666;
-
     --cinza-claro: #f7f8f8;
-
     --branco: #ffffff;
 
     --radius: 18px;
 
-    --shadow: 0 15px 35px rgba(0, 0, 0, .08);
-
+    --shadow:
+        0 15px 35px rgba(0, 0, 0, .08);
 }
 
 
@@ -64,13 +51,9 @@ body {
 ========================================================== */
 
 .container {
-
     width: 90%;
-
     max-width: 1300px;
-
     margin: auto;
-
 }
 
 
@@ -79,15 +62,12 @@ body {
 ========================================================== */
 
 .header {
-
     position: fixed;
 
     top: 0;
-
     left: 0;
 
     width: 100%;
-
     height: 88px;
 
     background: rgba(18, 18, 18, .97);
@@ -95,15 +75,12 @@ body {
     backdrop-filter: blur(10px);
 
     display: flex;
-
     justify-content: space-between;
-
     align-items: center;
 
     padding: 0 60px;
 
     z-index: 9999;
-
 }
 
 
@@ -112,22 +89,15 @@ body {
 ========================================================== */
 
 .logo {
-
     font-size: 28px;
-
     font-weight: 700;
-
     color: white;
 
     white-space: nowrap;
-
 }
 
-
 .logo span {
-
     color: var(--verde);
-
 }
 
 
@@ -136,7 +106,6 @@ body {
 ========================================================== */
 
 nav ul {
-
     display: flex;
 
     list-style: none;
@@ -144,12 +113,9 @@ nav ul {
     gap: 35px;
 
     align-items: center;
-
 }
 
-
 nav a {
-
     color: white;
 
     text-decoration: none;
@@ -157,14 +123,10 @@ nav a {
     font-weight: 500;
 
     transition: .3s;
-
 }
 
-
 nav a:hover {
-
     color: var(--verde);
-
 }
 
 
@@ -172,21 +134,7 @@ nav a:hover {
    HERO
 ========================================================== */
 
-/*
-   IMPORTANTE:
-
-   O Hero agora NÃO utiliza:
-
-       height: 100vh
-       object-fit: cover
-
-   Isso evita cortes no banner.
-
-   A altura será determinada pela própria imagem.
-*/
-
 .hero {
-
     width: 100%;
 
     margin-top: 88px;
@@ -196,83 +144,36 @@ nav a:hover {
     overflow: hidden;
 
     line-height: 0;
-
 }
 
 
-/* ==========================================================
-   IMAGEM PRINCIPAL DO HERO
-========================================================== */
-
 .hero-imagem-principal {
-
     width: 100%;
 
     display: block;
 
     margin: 0;
-
     padding: 0;
 
     overflow: hidden;
 
     background: #101010;
-
-}
-
-
-/*
-   A imagem ocupa 100% da largura.
-
-   height: auto mantém a proporção original.
-
-   Assim:
-
-   ✔ texto inteiro
-   ✔ personagem inteiro
-   ✔ cabeça
-   ✔ pés
-   ✔ laterais
-   ✔ sem cortes
-*/
-
-.hero-imagem-principal img {
-
-    display: block;
-
-    width: 100%;
-
-    height: auto;
-
-    max-width: 100%;
-
-    margin: 0;
-
-    padding: 0;
-
-    object-fit: contain;
-
-    object-position: center;
-
 }
 
 
 /* ==========================================================
-   COMPATIBILIDADE COM .hero-banner
+   IMAGEM PRINCIPAL
 ========================================================== */
 
-.hero-banner {
-
+.hero-imagem-principal img {
     display: block;
 
     width: 100%;
-
     height: auto;
 
     max-width: 100%;
 
     object-fit: contain;
-
 }
 
 
@@ -281,52 +182,34 @@ nav a:hover {
 ========================================================== */
 
 .sessao {
-
     padding: 100px 0;
-
-    background: #f7f8f8;
-
-    position: relative;
-
-    z-index: 2;
-
 }
 
 
 /* ==========================================================
-   TÍTULO DAS SEÇÕES
+   TÍTULOS
 ========================================================== */
 
 .titulo-sessao {
-
     text-align: center;
 
     margin-bottom: 55px;
-
 }
 
-
 .titulo-sessao h2 {
-
     font-size: 42px;
 
     margin-bottom: 15px;
 
-    color: #222;
-
     line-height: 1.2;
-
 }
 
-
 .titulo-sessao p {
-
     color: var(--cinza);
 
     font-size: 18px;
 
     line-height: 1.6;
-
 }
 
 
@@ -335,26 +218,22 @@ nav a:hover {
 ========================================================== */
 
 .cards {
-
     display: grid;
 
     grid-template-columns:
-        repeat(
-            auto-fit,
-            minmax(260px, 1fr)
-        );
+        repeat(auto-fit, minmax(260px, 1fr));
 
     gap: 30px;
 
+    align-items: start;
 }
 
 
 /* ==========================================================
-   CARD
+   CARD INDIVIDUAL
 ========================================================== */
 
 .card {
-
     background: white;
 
     border-radius: var(--radius);
@@ -365,30 +244,51 @@ nav a:hover {
 
     transition: .3s;
 
+    min-width: 0;
 }
 
-
 .card:hover {
-
     transform: translateY(-8px);
-
 }
 
 
 /* ==========================================================
-   IMAGEM DO CARD
+   ÁREA DA IMAGEM
 ========================================================== */
 
-.card img {
+/*
+   IMPORTANTE:
+
+   Não usamos "object-fit: cover".
+
+   As imagens dos exercícios possuem formatos
+   diferentes.
+
+   O contain garante que:
+
+   ✔ cabeça não seja cortada
+   ✔ pés não sejam cortados
+   ✔ setas não sejam cortadas
+   ✔ textos antigos não apareçam pela metade
+   ✔ toda a arte seja exibida
+*/
+
+.card > img {
+    display: block;
 
     width: 100%;
 
-    height: 230px;
+    height: 285px;
 
-    object-fit: cover;
+    object-fit: contain;
 
-    display: block;
+    object-position: center;
 
+    background: #ffffff;
+
+    padding: 0;
+
+    margin: 0;
 }
 
 
@@ -397,16 +297,17 @@ nav a:hover {
 ========================================================== */
 
 .card-body {
-
     padding: 25px;
-
 }
 
-
 .card-body h3 {
+    font-size: 24px;
 
     margin-bottom: 15px;
 
+    color: #111;
+
+    line-height: 1.25;
 }
 
 
@@ -415,7 +316,6 @@ nav a:hover {
 ========================================================== */
 
 .info {
-
     display: flex;
 
     flex-direction: column;
@@ -426,6 +326,7 @@ nav a:hover {
 
     color: #555;
 
+    font-size: 17px;
 }
 
 
@@ -434,7 +335,6 @@ nav a:hover {
 ========================================================== */
 
 .card button {
-
     width: 100%;
 
     padding: 15px;
@@ -447,19 +347,21 @@ nav a:hover {
 
     color: white;
 
+    font-family: 'Poppins', sans-serif;
+
+    font-size: 16px;
+
     font-weight: 600;
 
     cursor: pointer;
 
     transition: .3s;
-
 }
 
-
 .card button:hover {
-
     background: var(--verde-hover);
 
+    transform: translateY(-2px);
 }
 
 
@@ -468,7 +370,6 @@ nav a:hover {
 ========================================================== */
 
 .dicas {
-
     background: #f0f2f3;
 
     padding: 90px 0;
@@ -476,31 +377,20 @@ nav a:hover {
     position: relative;
 
     z-index: 2;
-
 }
 
 
 .dicas-grid {
-
     display: grid;
 
     grid-template-columns:
-        repeat(
-            auto-fit,
-            minmax(240px, 1fr)
-        );
+        repeat(auto-fit, minmax(240px, 1fr));
 
     gap: 30px;
-
 }
 
 
-/* ==========================================================
-   CARD DE DICA
-========================================================== */
-
 .card-dica {
-
     background: white;
 
     padding: 35px;
@@ -512,43 +402,30 @@ nav a:hover {
     text-align: center;
 
     transition: .3s;
-
 }
 
 
 .card-dica:hover {
-
     transform: translateY(-6px);
-
 }
 
 
-/* ==========================================================
-   ÍCONE
-========================================================== */
-
 .icone {
-
     font-size: 42px;
 
     margin-bottom: 15px;
-
 }
 
 
 .card-dica h3 {
-
     margin-bottom: 10px;
-
 }
 
 
 .card-dica p {
-
     color: #666;
 
     line-height: 1.6;
-
 }
 
 
@@ -557,7 +434,6 @@ nav a:hover {
 ========================================================== */
 
 .footer {
-
     background: #121212;
 
     color: white;
@@ -565,25 +441,20 @@ nav a:hover {
     padding: 50px 0;
 
     text-align: center;
-
 }
 
 
 .footer h3 {
-
     margin-bottom: 20px;
-
 }
 
 
 .footer p {
-
     color: #bbbbbb;
 
     margin-bottom: 10px;
 
     line-height: 1.6;
-
 }
 
 
@@ -592,7 +463,6 @@ nav a:hover {
 ========================================================== */
 
 .modal {
-
     display: none;
 
     position: fixed;
@@ -608,7 +478,6 @@ nav a:hover {
     z-index: 99999;
 
     padding: 30px;
-
 }
 
 
@@ -617,7 +486,6 @@ nav a:hover {
 ========================================================== */
 
 .modal-conteudo {
-
     background: #fff;
 
     width: 95%;
@@ -635,7 +503,6 @@ nav a:hover {
     position: relative;
 
     animation: abrirModal .3s ease;
-
 }
 
 
@@ -646,30 +513,24 @@ nav a:hover {
 @keyframes abrirModal {
 
     from {
-
         opacity: 0;
 
         transform: translateY(20px);
-
     }
 
     to {
-
         opacity: 1;
 
         transform: translateY(0);
-
     }
-
 }
 
 
 /* ==========================================================
-   FECHAR MODAL
+   BOTÃO FECHAR
 ========================================================== */
 
 .fechar {
-
     position: absolute;
 
     right: 25px;
@@ -678,12 +539,17 @@ nav a:hover {
 
     font-size: 36px;
 
-    cursor: pointer;
+    line-height: 1;
 
-    z-index: 10;
+    cursor: pointer;
 
     color: #222;
 
+    z-index: 10;
+}
+
+.fechar:hover {
+    color: var(--verde);
 }
 
 
@@ -692,30 +558,40 @@ nav a:hover {
 ========================================================== */
 
 .topo-modal {
+    display: grid;
 
-    display: flex;
+    grid-template-columns: 1fr;
 
-    justify-content: center;
+    gap: 25px;
 
-    align-items: center;
+    align-items: start;
 
-    margin-top: 20px;
-
+    margin-top: 15px;
 }
 
 
+/* ==========================================================
+   IMAGEM DO MODAL
+========================================================== */
+
 .topo-modal img {
+    display: block;
 
     width: 100%;
 
-    max-width: 420px;
+    max-width: 650px;
 
-    display: block;
+    max-height: 420px;
 
-    margin: 0 auto 20px;
+    height: auto;
 
-    border-radius: 15px;
+    object-fit: contain;
 
+    object-position: center;
+
+    margin: 0 auto;
+
+    background: #fff;
 }
 
 
@@ -724,54 +600,49 @@ nav a:hover {
 ========================================================== */
 
 .abas {
-
     display: grid;
 
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns:
+        repeat(4, 1fr);
 
-    gap: 15px;
+    gap: 10px;
 
-    margin: 25px 0;
-
+    margin-top: 25px;
 }
 
 
 .aba {
-
     border: none;
 
-    background: #efefef;
+    background: #f1f1f1;
 
-    padding: 12px 20px;
+    padding: 14px 10px;
 
-    border-radius: 12px;
+    border-radius: 10px;
 
     cursor: pointer;
 
-    transition: .3s;
+    font-family: 'Poppins', sans-serif;
+
+    font-size: 14px;
 
     font-weight: 600;
 
-    font-family: 'Poppins', sans-serif;
+    color: #444;
 
+    transition: .3s;
 }
 
 
 .aba:hover {
-
-    background: var(--verde);
-
-    color: white;
-
+    background: #e4e4e4;
 }
 
 
 .aba.ativa {
-
     background: var(--verde);
 
     color: white;
-
 }
 
 
@@ -780,48 +651,40 @@ nav a:hover {
 ========================================================== */
 
 #conteudoAba {
+    padding: 25px;
 
     background: #f8f8f8;
 
-    padding: 20px;
-
-    border-radius: 18px;
-
-    box-shadow:
-        0 5px 20px rgba(0, 0, 0, .05);
+    border-radius: 15px;
 
     margin-top: 20px;
 
-}
-
-
-#conteudoAba h3 {
-
-    margin-bottom: 15px;
-
-}
-
-
-#conteudoAba p {
+    font-size: 16px;
 
     line-height: 1.7;
-
 }
 
 
 #conteudoAba ul {
-
     padding-left: 25px;
-
 }
 
 
 #conteudoAba li {
+    margin-bottom: 8px;
+}
 
-    margin-bottom: 12px;
 
-    line-height: 1.6;
+/* ==========================================================
+   LINHA DO MODAL
+========================================================== */
 
+.modal-conteudo hr {
+    border: none;
+
+    border-top: 1px solid #ddd;
+
+    margin: 30px 0;
 }
 
 
@@ -830,24 +693,20 @@ nav a:hover {
 ========================================================== */
 
 .cronometro {
-
-    margin-top: 25px;
-
-    padding-top: 0;
-
     text-align: center;
 
+    padding: 10px 0 5px;
 }
 
 
 #contador {
+    font-size: 65px;
 
-    font-size: 70px;
+    font-weight: 700;
 
     color: var(--verde);
 
-    margin: 10px 0 15px;
-
+    margin-bottom: 15px;
 }
 
 
@@ -856,41 +715,38 @@ nav a:hover {
 ========================================================== */
 
 .barra {
-
     width: 100%;
 
     height: 12px;
 
     background: #e5e5e5;
 
-    border-radius: 30px;
+    border-radius: 20px;
 
     overflow: hidden;
 
-    margin-bottom: 25px;
-
+    margin-bottom: 20px;
 }
 
 
 #barraTempo {
-
     width: 0%;
 
     height: 100%;
 
     background: var(--verde);
 
-    transition: .9s linear;
+    border-radius: 20px;
 
+    transition: width .3s linear;
 }
 
 
 /* ==========================================================
-   BOTÃO DO CRONÔMETRO
+   BOTÃO CRONÔMETRO
 ========================================================== */
 
 .btn-cronometro {
-
     border: none;
 
     background: var(--verde);
@@ -910,16 +766,13 @@ nav a:hover {
     font-family: 'Poppins', sans-serif;
 
     transition: .3s;
-
 }
 
 
 .btn-cronometro:hover {
-
     background: var(--verde-hover);
 
     transform: translateY(-2px);
-
 }
 
 
@@ -929,70 +782,55 @@ nav a:hover {
 
 @media (max-width: 992px) {
 
-
-    /* HEADER */
-
     .header {
-
         height: 75px;
 
         padding: 0 25px;
-
     }
-
 
     .logo {
-
         font-size: 23px;
-
     }
-
 
     nav {
-
         display: none;
-
     }
-
-
-    /* HERO */
 
     .hero {
-
         margin-top: 75px;
-
     }
-
-
-    /* SEÇÕES */
 
     .sessao {
-
         padding: 80px 0;
-
     }
-
 
     .titulo-sessao h2 {
-
         font-size: 36px;
-
     }
 
+    .cards {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
 
-    /* MODAL */
+        gap: 25px;
+    }
+
+    .card > img {
+        height: 280px;
+
+        object-fit: contain;
+    }
 
     .modal {
-
         padding: 20px;
-
     }
 
+    .modal-conteudo {
+        max-height: 92vh;
+    }
 
-    .topo-modal {
-
-        grid-template-columns: 1fr;
-
+    .topo-modal img {
+        max-height: 380px;
     }
 
 }
@@ -1004,64 +842,30 @@ nav a:hover {
 
 @media (max-width: 600px) {
 
-
-    /* ======================================================
-       HEADER
-    ====================================================== */
+    /* HEADER */
 
     .header {
-
         height: 65px;
 
         padding: 0 15px;
-
     }
-
 
     .logo {
-
         font-size: 18px;
-
     }
-
 
     .logo span {
-
         font-size: 19px;
-
     }
-
 
     nav {
-
         display: none;
-
     }
 
 
-    /* ======================================================
-       HERO
-    ====================================================== */
-
-    /*
-       AQUI ESTÁ A CORREÇÃO PRINCIPAL.
-
-       NÃO usamos:
-
-           height: 100vh;
-           min-height: 100vh;
-           object-fit: cover;
-
-       A imagem terá sua altura natural.
-
-       Assim o celular mostra
-       a arte inteira.
-    */
+    /* HERO */
 
     .hero {
-
-        width: 100%;
-
         margin-top: 65px;
 
         height: auto;
@@ -1071,27 +875,15 @@ nav a:hover {
         padding: 0;
 
         overflow: hidden;
-
     }
 
-
     .hero-imagem-principal {
-
-        width: 100%;
-
         height: auto;
 
         min-height: 0;
-
-        display: block;
-
-        overflow: hidden;
-
     }
-
 
     .hero-imagem-principal img {
-
         width: 100%;
 
         height: auto;
@@ -1101,158 +893,107 @@ nav a:hover {
         display: block;
 
         object-fit: contain;
-
-        object-position: center;
-
     }
 
 
-    .hero-banner {
-
-        width: 100%;
-
-        height: auto;
-
-        max-width: 100%;
-
-        object-fit: contain;
-
-    }
-
-
-    /* ======================================================
-       SEÇÕES
-    ====================================================== */
+    /* SEÇÕES */
 
     .sessao {
-
         padding: 70px 20px;
-
     }
 
-
     .container {
-
         width: 100%;
 
         max-width: 100%;
-
     }
 
 
-    /* ======================================================
-       TÍTULOS
-    ====================================================== */
+    /* TÍTULOS */
 
     .titulo-sessao {
-
         margin-bottom: 40px;
 
         padding: 0 10px;
-
     }
 
-
     .titulo-sessao h2 {
-
         font-size: 28px;
 
         line-height: 1.25;
 
         margin-bottom: 15px;
-
     }
 
-
     .titulo-sessao p {
-
         font-size: 16px;
 
         line-height: 1.6;
-
     }
 
 
-    /* ======================================================
-       CARDS
-    ====================================================== */
+    /* CARDS */
 
     .cards {
-
         grid-template-columns: 1fr;
 
-        gap: 20px;
-
+        gap: 25px;
     }
-
 
     .card {
-
         width: 100%;
-
     }
 
+    /*
+       No celular também usamos contain.
+       A imagem fica inteira.
+    */
 
-    .card img {
-
+    .card > img {
         width: 100%;
 
-        height: auto;
-
-        max-height: none;
+        height: 300px;
 
         object-fit: contain;
 
-    }
+        object-position: center;
 
+        background: #fff;
+    }
 
     .card-body {
-
         padding: 20px;
+    }
 
+    .card-body h3 {
+        font-size: 22px;
     }
 
 
-    /* ======================================================
-       DICAS
-    ====================================================== */
+    /* DICAS */
 
     .dicas {
-
         padding: 70px 20px;
-
     }
 
-
     .dicas-grid {
-
         grid-template-columns: 1fr;
 
         gap: 20px;
-
     }
-
 
     .card-dica {
-
         padding: 25px 20px;
-
     }
 
 
-    /* ======================================================
-       MODAL
-    ====================================================== */
+    /* MODAL */
 
     .modal {
-
         padding: 10px;
-
     }
 
-
     .modal-conteudo {
-
         width: 100%;
 
         max-width: 100%;
@@ -1262,93 +1003,69 @@ nav a:hover {
         padding: 20px;
 
         border-radius: 16px;
-
     }
 
-
     .fechar {
-
         right: 15px;
 
         top: 10px;
 
         font-size: 32px;
-
     }
 
-
     .topo-modal {
-
         display: block;
 
         margin-top: 15px;
-
     }
 
-
     .topo-modal img {
-
         width: 100%;
 
         max-width: 100%;
 
+        max-height: 350px;
+
         height: auto;
 
+        object-fit: contain;
     }
 
 
-    /* ======================================================
-       ABAS
-    ====================================================== */
+    /* ABAS */
 
     .abas {
-
         grid-template-columns: 1fr 1fr;
 
         gap: 10px;
-
     }
 
-
     .aba {
-
         padding: 12px 8px;
 
         font-size: 13px;
-
     }
 
 
-    /* ======================================================
-       CONTEÚDO DAS ABAS
-    ====================================================== */
+    /* CONTEÚDO */
 
     #conteudoAba {
-
         padding: 18px;
 
         font-size: 15px;
-
     }
 
 
-    /* ======================================================
-       CRONÔMETRO
-    ====================================================== */
+    /* CRONÔMETRO */
 
     #contador {
-
         font-size: 55px;
-
     }
 
-
     .btn-cronometro {
-
         width: 100%;
 
         font-size: 16px;
-
     }
 
 }
@@ -1360,64 +1077,44 @@ nav a:hover {
 
 @media (max-width: 380px) {
 
-
     .header {
-
         height: 62px;
 
         padding: 0 12px;
-
     }
-
 
     .logo {
-
         font-size: 17px;
-
     }
-
 
     .logo span {
-
         font-size: 18px;
-
     }
-
 
     .hero {
-
         margin-top: 62px;
-
     }
-
 
     .titulo-sessao h2 {
-
         font-size: 26px;
-
     }
-
 
     .titulo-sessao p {
-
         font-size: 15px;
-
     }
 
+    .card > img {
+        height: 280px;
+    }
 
     .modal-conteudo {
-
         padding: 18px;
-
     }
 
-
     .aba {
-
         font-size: 12px;
 
         padding: 10px 6px;
-
     }
 
 }
