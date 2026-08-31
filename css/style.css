@@ -8,11 +8,9 @@
     box-sizing: border-box;
 }
 
-
 html {
     scroll-behavior: smooth;
 }
-
 
 body {
     font-family: "Poppins", sans-serif;
@@ -20,7 +18,6 @@ body {
     color: #222;
     overflow-x: hidden;
 }
-
 
 img {
     display: block;
@@ -61,7 +58,6 @@ img {
     z-index: 1000;
 }
 
-
 .logo {
     display: flex;
     align-items: center;
@@ -75,14 +71,12 @@ img {
     white-space: nowrap;
 }
 
-
 .logo img {
     width: 42px;
     height: 42px;
 
     object-fit: contain;
 }
-
 
 .header nav ul {
     display: flex;
@@ -91,7 +85,6 @@ img {
 
     list-style: none;
 }
-
 
 .header nav a {
     color: white;
@@ -104,7 +97,6 @@ img {
     transition: 0.3s;
 }
 
-
 .header nav a:hover {
     color: #55b92a;
 }
@@ -113,19 +105,6 @@ img {
 /* =====================================================
    HERO
 ===================================================== */
-
-/*
-   IMPORTANTE:
-   O HTML atual utiliza:
-
-   <section class="hero">
-       <div class="hero-imagem-principal">
-           <img src="logo.png">
-       </div>
-   </section>
-
-   Portanto usamos exatamente essas classes.
-*/
 
 .hero {
     width: 100%;
@@ -143,11 +122,8 @@ img {
     line-height: 0;
 }
 
-
 .hero-imagem-principal {
     width: 100%;
-
-    height: auto;
 
     margin: 0;
     padding: 0;
@@ -158,7 +134,6 @@ img {
 
     overflow: hidden;
 }
-
 
 .hero-imagem-principal img {
     width: 100%;
@@ -175,7 +150,7 @@ img {
 
 
 /* =====================================================
-   CASO O HERO ANTIGO AINDA ESTEJA SENDO USADO
+   HERO ANTIGO
 ===================================================== */
 
 .hero-conteudo {
@@ -191,11 +166,9 @@ img {
     gap: 60px;
 }
 
-
 .hero-texto {
     flex: 1;
 }
-
 
 .hero-tag {
     color: #55b92a;
@@ -206,7 +179,6 @@ img {
     letter-spacing: 1px;
 }
 
-
 .hero h1 {
     font-size: 58px;
 
@@ -214,7 +186,6 @@ img {
 
     margin: 15px 0;
 }
-
 
 .hero p {
     max-width: 600px;
@@ -227,7 +198,6 @@ img {
 
     margin-bottom: 30px;
 }
-
 
 .btn-hero {
     display: inline-block;
@@ -247,13 +217,11 @@ img {
     transition: 0.3s;
 }
 
-
 .btn-hero:hover {
     transform: translateY(-2px);
 
     background: #48a321;
 }
-
 
 .hero-imagem {
     flex: 0 0 360px;
@@ -262,7 +230,6 @@ img {
 
     justify-content: center;
 }
-
 
 .hero-imagem img {
     width: 330px;
@@ -281,18 +248,15 @@ img {
     padding: 90px 0;
 }
 
-
 .sessao-depois {
     background: #eef3f0;
 }
-
 
 .titulo-sessao {
     text-align: center;
 
     margin-bottom: 50px;
 }
-
 
 .subtitulo {
     color: #55b92a;
@@ -304,13 +268,11 @@ img {
     letter-spacing: 1.5px;
 }
 
-
 .titulo-sessao h2 {
     font-size: 34px;
 
     margin: 8px 0 10px;
 }
-
 
 .titulo-sessao p {
     color: #666;
@@ -334,7 +296,6 @@ img {
     align-items: stretch;
 }
 
-
 .card {
     background: white;
 
@@ -356,7 +317,6 @@ img {
         box-shadow 0.3s ease;
 }
 
-
 .card:hover {
     transform: translateY(-7px);
 
@@ -368,23 +328,6 @@ img {
 /* =====================================================
    IMAGENS DOS CARDS
 ===================================================== */
-
-/*
-   O script.js cria:
-
-   <div class="card">
-       <img src="...">
-       <div class="card-body">
-           ...
-       </div>
-   </div>
-
-   Portanto precisamos estilizar:
-
-   .card > img
-
-   e NÃO somente .card-imagem img.
-*/
 
 .card > img {
     width: 100%;
@@ -403,12 +346,6 @@ img {
 
     flex-shrink: 0;
 }
-
-
-/*
-   Mantemos também essa classe caso futuramente
-   você utilize um container .card-imagem.
-*/
 
 .card-imagem {
     width: 100%;
@@ -429,7 +366,6 @@ img {
 
     flex-shrink: 0;
 }
-
 
 .card-imagem img {
     width: 100%;
@@ -458,13 +394,11 @@ img {
     flex: 1;
 }
 
-
 .card-body h3 {
     font-size: 23px;
 
     margin-bottom: 18px;
 }
-
 
 .info {
     display: flex;
@@ -479,7 +413,6 @@ img {
 
     margin-bottom: 22px;
 }
-
 
 .info span {
     display: block;
@@ -516,7 +449,6 @@ img {
     transition: 0.3s;
 }
 
-
 .btn-ver-exercicio:hover {
     background: #48a321;
 
@@ -534,7 +466,6 @@ img {
     background: white;
 }
 
-
 .dicas-grid {
     display: grid;
 
@@ -543,7 +474,6 @@ img {
 
     gap: 25px;
 }
-
 
 .card-dica {
     text-align: center;
@@ -555,20 +485,17 @@ img {
     border-radius: 18px;
 }
 
-
 .card-dica .icone {
     font-size: 42px;
 
     margin-bottom: 15px;
 }
 
-
 .card-dica h3 {
     font-size: 20px;
 
     margin-bottom: 10px;
 }
-
 
 .card-dica p {
     color: #666;
@@ -591,13 +518,11 @@ img {
     text-align: center;
 }
 
-
 .footer h3 {
     font-size: 25px;
 
     margin-bottom: 15px;
 }
-
 
 .footer p {
     max-width: 800px;
@@ -635,7 +560,6 @@ img {
     overflow-y: auto;
 }
 
-
 .modal-conteudo {
     position: relative;
 
@@ -653,7 +577,6 @@ img {
 
     padding: 30px;
 }
-
 
 .fechar {
     position: absolute;
@@ -673,11 +596,9 @@ img {
     z-index: 5;
 }
 
-
 .fechar:hover {
     color: #55b92a;
 }
-
 
 .modal-conteudo > h2 {
     text-align: center;
@@ -714,7 +635,6 @@ img {
     margin-bottom: 25px;
 }
 
-
 .topo-modal img {
     width: 100%;
 
@@ -742,7 +662,6 @@ img {
     margin-bottom: 25px;
 }
 
-
 .aba {
     border: none;
 
@@ -763,11 +682,9 @@ img {
     transition: 0.3s;
 }
 
-
 .aba:hover {
     background: #dcebdc;
 }
-
 
 .aba.ativa {
     background: #55b92a;
@@ -788,19 +705,16 @@ img {
     line-height: 1.7;
 }
 
-
 #conteudoAba h3 {
     color: #222;
 
     margin-bottom: 15px;
 }
 
-
 #conteudoAba ol,
 #conteudoAba ul {
     padding-left: 25px;
 }
-
 
 #conteudoAba li {
     margin-bottom: 8px;
@@ -817,13 +731,11 @@ img {
     padding-top: 20px;
 }
 
-
 .cronometro h3 {
     font-size: 50px;
 
     margin-bottom: 15px;
 }
-
 
 .barra {
     width: 100%;
@@ -839,7 +751,6 @@ img {
     margin-bottom: 20px;
 }
 
-
 #barraTempo {
     width: 0%;
 
@@ -849,7 +760,6 @@ img {
 
     transition: width 0.3s;
 }
-
 
 .btn-cronometro {
     border: none;
@@ -869,7 +779,6 @@ img {
     cursor: pointer;
 }
 
-
 .btn-cronometro:hover {
     background: #48a321;
 }
@@ -886,17 +795,14 @@ img {
             repeat(2, minmax(0, 1fr));
     }
 
-
     .dicas-grid {
         grid-template-columns:
             repeat(2, 1fr);
     }
 
-
     .hero h1 {
         font-size: 46px;
     }
-
 }
 
 
@@ -906,9 +812,9 @@ img {
 
 @media (max-width: 768px) {
 
-    /* -------------------------------------------------
+    /* =================================================
        CABEÇALHO
-    ------------------------------------------------- */
+    ================================================= */
 
     .header {
         width: 100%;
@@ -922,18 +828,15 @@ img {
         gap: 14px;
     }
 
-
     .logo {
         font-size: 24px;
 
         gap: 9px;
     }
 
-
     .header nav {
         width: 100%;
     }
-
 
     .header nav ul {
         width: 100%;
@@ -945,71 +848,81 @@ img {
         justify-content: center;
     }
 
-
     .header nav a {
         font-size: 14px;
     }
 
 
-    /* -------------------------------------------------
-       HERO
-
-       IMPORTANTE:
-       SEM padding.
-       SEM min-height.
-       Isso elimina o espaço branco.
-    ------------------------------------------------- */
+    /* =================================================
+       HERO MOBILE
+       
+       AQUI ESTÁ A PRINCIPAL CORREÇÃO.
+       
+       A imagem possui espaço branco dentro dela.
+       Então, no celular, usamos uma área com altura
+       definida e object-fit: cover para preencher
+       completamente a tela.
+    ================================================= */
 
     .hero {
         width: 100%;
 
-        height: auto;
+        height: 310px !important;
 
-        min-height: 0;
+        min-height: 310px !important;
 
-        margin: 0;
+        margin: 0 !important;
 
-        padding: 0;
+        padding: 0 !important;
+
+        overflow: hidden;
 
         background: #f7faf8;
 
-        overflow: hidden;
+        line-height: 0;
     }
-
 
     .hero-imagem-principal {
         width: 100%;
 
-        height: auto;
+        height: 100% !important;
 
-        margin: 0;
+        margin: 0 !important;
 
-        padding: 0;
+        padding: 0 !important;
 
         display: block;
 
         overflow: hidden;
     }
 
-
     .hero-imagem-principal img {
-        width: 100%;
+        width: 100% !important;
 
-        height: auto;
+        height: 100% !important;
+
+        max-width: none !important;
+
+        margin: 0 !important;
+
+        padding: 0 !important;
 
         display: block;
 
-        margin: 0;
+        object-fit: cover;
 
-        padding: 0;
-
-        object-fit: contain;
+        /*
+           Ajusta o enquadramento da imagem.
+           "center center" mantém o personagem
+           e o conteúdo principal centralizados.
+        */
+        object-position: center center;
     }
 
 
-    /* -------------------------------------------------
+    /* =================================================
        HERO ANTIGO
-    ------------------------------------------------- */
+    ================================================= */
 
     .hero-conteudo {
         width: 92%;
@@ -1021,20 +934,17 @@ img {
         gap: 30px;
     }
 
-
     .hero p {
         margin-left: auto;
 
         margin-right: auto;
     }
 
-
     .hero-imagem {
         flex: none;
 
         width: 100%;
     }
-
 
     .hero-imagem img {
         width: 280px;
@@ -1043,24 +953,21 @@ img {
     }
 
 
-    /* -------------------------------------------------
+    /* =================================================
        SEÇÕES
-    ------------------------------------------------- */
+    ================================================= */
 
     .sessao {
         padding: 65px 0;
     }
 
-
     .titulo-sessao {
         margin-bottom: 35px;
     }
 
-
     .titulo-sessao h2 {
         font-size: 28px;
     }
-
 
     .titulo-sessao p {
         font-size: 15px;
@@ -1069,9 +976,9 @@ img {
     }
 
 
-    /* -------------------------------------------------
+    /* =================================================
        CARDS
-    ------------------------------------------------- */
+    ================================================= */
 
     .cards {
         grid-template-columns: 1fr;
@@ -1079,11 +986,9 @@ img {
         gap: 24px;
     }
 
-
     .card {
         width: 100%;
     }
-
 
     .card > img {
         width: 100%;
@@ -1095,25 +1000,22 @@ img {
         object-fit: contain;
     }
 
-
     .card-body {
         padding: 22px;
     }
-
 
     .card-body h3 {
         font-size: 22px;
     }
 
 
-    /* -------------------------------------------------
+    /* =================================================
        DICAS
-    ------------------------------------------------- */
+    ================================================= */
 
     .dicas {
         padding: 65px 0;
     }
-
 
     .dicas-grid {
         grid-template-columns: 1fr;
@@ -1122,14 +1024,13 @@ img {
     }
 
 
-    /* -------------------------------------------------
+    /* =================================================
        MODAL
-    ------------------------------------------------- */
+    ================================================= */
 
     .modal {
         padding: 10px;
     }
-
 
     .modal-conteudo {
         width: 100%;
@@ -1141,13 +1042,11 @@ img {
         border-radius: 18px;
     }
 
-
     .modal-conteudo > h2 {
         font-size: 25px;
 
         margin-bottom: 15px;
     }
-
 
     .topo-modal {
         width: 100%;
@@ -1157,7 +1056,6 @@ img {
         margin-bottom: 20px;
     }
 
-
     .topo-modal img {
         width: 100%;
 
@@ -1166,11 +1064,9 @@ img {
         object-fit: contain;
     }
 
-
     .abas {
         gap: 7px;
     }
-
 
     .aba {
         font-size: 14px;
@@ -1178,11 +1074,9 @@ img {
         padding: 10px 12px;
     }
 
-
     .cronometro h3 {
         font-size: 44px;
     }
-
 }
 
 
@@ -1196,25 +1090,45 @@ img {
         width: 90%;
     }
 
-
     .logo {
         font-size: 21px;
     }
 
-
     .header nav ul {
         gap: 10px;
     }
-
 
     .header nav a {
         font-size: 13px;
     }
 
 
-    /* -----------------------------------------------
+    /* =================================================
+       HERO PARA CELULARES PEQUENOS
+    ================================================= */
+
+    .hero {
+        height: 270px !important;
+
+        min-height: 270px !important;
+    }
+
+    .hero-imagem-principal {
+        height: 100% !important;
+    }
+
+    .hero-imagem-principal img {
+        height: 100% !important;
+
+        object-fit: cover;
+
+        object-position: center center;
+    }
+
+
+    /* =================================================
        CARDS
-    ----------------------------------------------- */
+    ================================================= */
 
     .card > img {
         height: 250px;
@@ -1222,62 +1136,53 @@ img {
         padding: 10px;
     }
 
-
     .card-body {
         padding: 20px;
     }
 
-
     .card-body h3 {
         font-size: 21px;
     }
-
 
     .info {
         font-size: 14px;
     }
 
 
-    /* -----------------------------------------------
+    /* =================================================
        TÍTULOS
-    ----------------------------------------------- */
+    ================================================= */
 
     .titulo-sessao h2 {
         font-size: 25px;
     }
 
 
-    /* -----------------------------------------------
+    /* =================================================
        MODAL
-    ----------------------------------------------- */
+    ================================================= */
 
     .modal-conteudo {
         padding: 16px;
     }
 
-
     .topo-modal {
         height: 250px;
     }
-
 
     .abas {
         flex-direction: column;
     }
 
-
     .aba {
         width: 100%;
     }
-
 
     .cronometro h3 {
         font-size: 40px;
     }
 
-
     .btn-cronometro {
         width: 100%;
     }
-
 }
